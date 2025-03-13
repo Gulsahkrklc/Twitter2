@@ -9,10 +9,14 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "like",schema = "public")
-public class Like {
+@Table(name = "comment",schema = "public")
+public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="like_id")
     private Long id;
+
+    @Column(name="content")
+    private String content;
+
+
 }

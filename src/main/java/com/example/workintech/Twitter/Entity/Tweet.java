@@ -6,13 +6,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name="tweets",schema = "public")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "like",schema = "public")
-public class Like {
+public class Tweet {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="like_id")
+    @Column(name="text_id")
     private Long id;
+
+    @Column(name="text")
+    private String text;
+
+
 }

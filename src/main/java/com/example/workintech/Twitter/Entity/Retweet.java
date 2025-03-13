@@ -6,13 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name="retweet", schema="public")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "like",schema = "public")
-public class Like {
+public class Retweet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="like_id")
+    @Column(name="retweet_id")
     private Long id;
+
 }
